@@ -1,0 +1,2 @@
+alert tcp any any -> any any  (msg:"EX ATTACK_HTTP Inbound/Outbound Suspicious Traffic "; content:"POST"; content:"/wOOnl9tnKeyeyjNO"; http_raw_header; sid:12000001;)
+alert tcp $EXTERNAL_NET 8080 -> any any  (msg:"EX ATTACK_HTTP Inbound Suspicious Traffic "; content:"text/html"; http_raw_header; sid:12000002;)
